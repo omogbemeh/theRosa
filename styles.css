@@ -94,6 +94,7 @@ header {
     left: 0;
     width: 80%;
     height: 100vh;
+    z-index: 1250;
     background-color: var(--main-font-colour-dark);
     padding: 4.4rem;
     display: flex;
@@ -109,6 +110,23 @@ header {
     -moz-transition: all .5s;
     -ms-transition: all .5s;
     -o-transition: all .5s;
+}
+
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+
+.nav-link:hover {
+    color: var(--secondary-font-color)
 }
 
 .nav::before {
@@ -130,7 +148,7 @@ header {
     -webkit-transition: opacity 0.5s;
     -moz-transition: opacity 0.5s;
     -ms-transition: opacity 0.5s;
-    -o-transition: all 0.5s;
+    -o-transition: opacity 0.5s;
 }
 
 .open .fa-times {
@@ -156,4 +174,192 @@ header {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
+}
+
+
+/* Hero */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('images/hero.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sub-headliner {
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: .4;
+}
+
+.first-letter {
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headliner {
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
+}
+
+.seperator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 100%;
+    max-width: 8.4rem;
+    background-color: #fff;
+    height: .25rem;
+    position: relative;
+}
+
+.line-right::before,
+.line-left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.line-left::before {
+    border-left-color: #fff;
+    left: 0;
+}
+
+.line-right::before {
+    border-right-color: #fff;
+    right: 0;
+}
+
+.asterisk {
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+}
+
+.headline-description h5 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 2px;
+}
+
+.cta-btn {
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: .9rem 1.8rem;
+    color: var(--body-font-color);
+    border-radius: .4rem;
+    transition: background-color .5s;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+    -webkit-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -ms-transition: background-color .5s;
+    -o-transition: background-color .5s;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    color: #fff;
+    background-color: var(--secondary-font-color);
+}
+
+
+/* Discover Our Story */
+
+.global-headliner {
+    text-align: center;
+    margin-top: 3.9rem;
+}
+
+.story .global-headliner {
+    margin-top: 6.9rem;
+}
+
+.global-headliner .asterisk {
+    color: var(--body-font-color);
+    margin: 2.4rem auto;
+}
+
+.headliner-dark {
+    color: var(--main-font-colour-dark);
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.global-headliner .sub-headliner {
+    letter-spacing: -.1px;
+    line-height: .42;
+}
+
+.info {
+    text-align: center;
+}
+
+.description {
+    margin-bottom: 3rem;
+}
+
+.description p {
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+
+.body-btn {
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    position: relative;
+}
+
+.body-btn::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-font-color);
+    bottom: -3px;
+}
+
+.body-btn:focus,
+.body-btn:hover {
+    color: var(--main-font-colour-dark)
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before {
+    background-color: var(--main-font-colour-dark);
 }
