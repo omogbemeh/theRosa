@@ -363,3 +363,237 @@ header {
 .body-btn:focus::before {
     background-color: var(--main-font-colour-dark);
 }
+
+.recipes {
+    background: url('./images/tasteful-recipes.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.between {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* menu */
+
+.img-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.menu .description {
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+.blend {
+    background: url('./images/perfect-blend.jpg') center no-repeat;
+    background-size: cover;
+}
+
+footer {
+    padding: 7.9rem 0;
+    text-align: center;
+    position: relative;
+    background-color: #121212;
+    color: #fff;
+}
+
+.back-to-top {
+    width: 7rem;
+    height: 7rem;
+    background-color: #121212;
+    color: #fff;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.back-to-top i {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.footer-content {
+    overflow: hidden;
+}
+
+.footer-about h4 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+.footer-about .asterisk {
+    margin: 2.4rem 0;
+}
+
+.footer-about {
+    margin-bottom: 5.4rem;
+}
+
+.footer-about p {
+    line-height: 2;
+}
+
+.social-icons {
+    list-style: none;
+    margin-bottom: 5.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    padding: .8rem 2rem;
+    opacity: .5;
+    font-size: 2rem;
+    color: #fff;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.social-icons i:focus,
+.social-icons i:hover {
+    color: var(--secondary-font-color)
+}
+
+.newsletter-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 1rem;
+    max-width: 25rem;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+.newsletter-btn {
+    background: transparent;
+    border: none;
+    color: var(--main-font-colour-dark);
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1px .6rem;
+    position: absolute;
+    top: 50%;
+    margin-left: 21.5rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 900px) {
+    section {
+        padding: 7.9rem;
+    }
+    .menu-toggler {
+        display: none;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+        justify-content: space-around;
+        -webkit-transform: initial;
+        -moz-transform: initial;
+        -ms-transform: initial;
+        -o-transform: initial;
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -ms-transition: initial;
+        -o-transition: initial;
+    }
+    .nav-item {
+        margin: 0 1rem;
+        border: none;
+    }
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    .active {
+        position: relative;
+    }
+    .active::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        bottom: -3px;
+    }
+    .sub-headliner {
+        font-size: 10rem;
+    }
+    .first-letter {
+        font-size: 12.2rem;
+    }
+    .headliner {
+        font-size: 4.7rem;
+        letter-spacing: .8rem;
+    }
+    .line {
+        max-width: 11.4rem;
+    }
+    .info {
+        align-items: center;
+        display: flex;
+    }
+    .info>div {
+        flex: 1;
+    }
+    .padding-right {
+        padding-right: 7rem;
+    }
+    .footer-content {
+        max-width: 77.5rem;
+        margin: auto;
+    }
+    .footer-about {
+        max-width: 51.3rem;
+        margin: 0 auto 5.4rem;
+    }
+}
